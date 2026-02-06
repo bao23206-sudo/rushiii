@@ -55,11 +55,11 @@ if uploaded_file is not None:
             prob = float(prediction[0][0])
 
             if prob > 0.5:
-                st.success(f" **Con người** (Độ tin cậy: {prob:.2%})")
+                st.success(f" **Con người** ")
             elif prob < 0.5:
-                st.error(f" **Không phải con người** (Độ tin cậy: {(1-prob):.2%})")
+                st.error(f" **Không phải con người** ")
             else:
-                st.info("Kết quả không rõ ràng (Độ tin cậy: 50.00%)")
+                st.info("Kết quả không rõ ràng")
 
             st.write("###  Chi tiết dự đoán")
             st.write(f"Giá trị output model: {prob:.4f}")
