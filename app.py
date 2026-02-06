@@ -16,10 +16,7 @@ def load_model():
     return model
 
 model = load_model()
-
-# =========================
 # Tiền xử lý ảnh
-# =========================
 def preprocess_image(image: Image.Image):
     image = image.convert("RGB")
     image = image.resize(IMG_SIZE)
@@ -28,9 +25,8 @@ def preprocess_image(image: Image.Image):
     img_array = np.expand_dims(img_array, axis=0)
     return img_array
 
-# =========================
 # Giao diện Streamlit
-# =========================
+
 st.set_page_config(
     page_title="Nhận diện Con Người (CNN)",
     page_icon="",
